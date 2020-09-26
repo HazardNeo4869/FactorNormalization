@@ -1,2 +1,2 @@
 # FactorNormalization
-code for Factor Normalization for Deep  Neural Network Models
+code for {\it Factor Normalization for Deep  Neural Network Models}
