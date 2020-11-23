@@ -15,7 +15,7 @@ We first initialize an AlexNet and a ResNet50(from keras.applications.resnet50),
 
 **1. high dimensional SVD**
 
-We calculate the factor weight by conducting SVD on a large number of training data in advanced. we save the factor weights and regression coefficients (for separating residual) to an npz file so that we don't need to estimate the factor weights every time. 
+We calculate the factor weight by conducting SVD on a large number of training data in advanced. Standard PCA can not directly conducted because parameter dimension p is extremely large. However, SVD allows us to calculate row sigular vector first (we can choose sample size N relative small compared to p), then eliminate left orthogonal matrix and obtain column sigular vector. Then we save the factor weights and regression coefficients (for separating residual) to an npz file so that we don't need to estimate the factor weights every time. 
 
 **2. residual regression**
 
